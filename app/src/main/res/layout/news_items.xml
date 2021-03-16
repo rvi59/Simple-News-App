@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="4dp"
+        android:padding="10dp"
+        app:cardCornerRadius="4dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/myConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                app:layout_constraintLeft_toLeftOf="@+id/backImg"
+                app:layout_constraintRight_toRightOf="@+id/backImg"
+                app:layout_constraintTop_toTopOf="@+id/backImg" />
+
+            <ImageView
+                android:id="@+id/backImg"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/pic0"
+                app:layout_constraintBottom_toBottomOf="@+id/myConstraint"
+                app:layout_constraintEnd_toEndOf="@+id/myConstraint"
+                app:layout_constraintStart_toStartOf="@+id/myConstraint"
+                app:layout_constraintTop_toTopOf="@+id/myConstraint" />
+
+            <RelativeLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="#8CE17373"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/backImg"
+                app:layout_constraintEnd_toEndOf="@+id/backImg"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/backImg"
+                app:layout_constraintTop_toTopOf="@+id/backImg"
+                app:layout_constraintVertical_bias="1.0" >
+
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="4 Killed as Myanmar forces continue crackdown on Protester"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tvSource"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:padding="3dp"
+                    android:layout_below="@+id/tvTitle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="1dp"
+                    android:text="The Times of India"
+                    android:background="@drawable/date_lay"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/date_lay"
+                android:text="22-01-2021"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:padding="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
