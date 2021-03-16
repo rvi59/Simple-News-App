@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private NewsAdapter mNewsAdapter;
     List<Articles> mList = new ArrayList<>();
-    final String API_KEY = "76bc9f5077a648948245e65c3209586d";
+    final String API_KEY = "Your Api";
     private SwipeRefreshLayout mRefreshLayout;
     EditText mEditTextQuery;
     Button mButtonSearch;
