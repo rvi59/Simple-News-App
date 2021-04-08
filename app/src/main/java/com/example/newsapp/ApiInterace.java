@@ -8,6 +8,8 @@ import retrofit2.http.Query;
 
 public interface ApiInterace {
 
+
+
     @GET("top-headlines")
     Call<NewsHeadlines> getHeadlines(
             @Query("country") String country,

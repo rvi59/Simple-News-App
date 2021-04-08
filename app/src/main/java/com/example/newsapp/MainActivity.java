@@ -2,8 +2,10 @@ package com.example.newsapp;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.DialogInterface;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private NewsAdapter mNewsAdapter;
     List<Articles> mList = new ArrayList<>();
-    final String API_KEY = "Your Api";
+    final String API_KEY = "Your API Key";
     private SwipeRefreshLayout mRefreshLayout;
     EditText mEditTextQuery;
     Button mButtonSearch;
@@ -54,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.HORIZONTAL);
+
+        //mRecyclerView.setLayoutManager(staggeredGridLayoutManager);
         final String country = getCountry();
         mRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
